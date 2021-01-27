@@ -1,0 +1,16 @@
+@layout('layouts/master')
+
+@section('content')
+  <div class="card">
+    <form class="card-form" action="{{ route('documents.store')}}" method="POST" enctype="multipart/form-data">
+      <h2>Novo documento</h2>
+      <input type="text" placeholder="Título" name="title">
+      <textarea placeholder="Descrição" name="description" cols="10"></textarea>
+      <input type="text" placeholder="Tags" name="tags">
+
+      <input type="file" name="file">
+
+      <button>Salvar</button>
+    </form>
+  </div>
+@endsection
